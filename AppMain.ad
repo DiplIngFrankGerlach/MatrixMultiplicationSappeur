@@ -1,0 +1,34 @@
+
+
+
+
+class Matrix
+{
+   *float feld[];
+   int zeilen;
+   int spalten;
+   int speicherungZeilenWeise;
+   
+methods:
+     Matrix(int zeilen_i, int spalten_i,int speicherungZeilenWeise_i);
+
+     float gebe(int zeile, int spalte);
+
+     void setze(int zeile, int spalte, float wert);
+
+     void multipliziere(&Matrix b,&Matrix ergebnis);
+};
+
+
+
+ 
+class Main
+{
+  methods:
+
+    int main();
+
+};
+
+
+

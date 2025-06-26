@@ -1,0 +1,454 @@
+Import{ "Strings.ad", "ZKNuetzlich.ad", "System.ad" }
+
+
+int ZKNuetzlich::istLeerzeichen(char c)
+{
+   switch( cast(int,c) )
+   {
+       case 32:
+       case 9:
+       case 10:
+       case 13:
+          { return 1; };
+       break;
+       default:
+          { return 0; };
+   }
+   return 0;//wird nie erreicht, Compiler will aber ein return sehen 
+}
+
+
+int ZKNuetzlich::istZiffer(char z)
+{
+   switch(z)
+   {
+       case '0':
+       case '1':
+       case '2':
+       case '3':
+       case '4':
+       case '5':
+       case '6':
+       case '7':
+       case '8':
+       case '9':{ return 1;};break;
+   }
+   return 0;
+}
+
+int ZKNuetzlich::istAlphabetisch(char z)
+{
+   switch(z)
+   {
+       case 'A':
+       case 'B':
+       case 'C':
+       case 'D':
+       case 'E':
+       case 'F':
+       case 'G':
+       case 'H':
+       case 'I':
+       case 'J':
+       case 'K':
+       case 'L':
+       case 'M':
+       case 'N':
+       case 'O':
+       case 'P':
+       case 'Q':
+       case 'R':
+       case 'S':
+       case 'T':
+       case 'U':
+       case 'V':
+       case 'W':
+       case 'X':
+       case 'Y':
+       case 'Z':
+       case 'a':
+       case 'b':
+       case 'c':
+       case 'd':
+       case 'e':
+       case 'f':
+       case 'g':
+       case 'h':
+       case 'i':
+       case 'j':
+       case 'k':
+       case 'l':
+       case 'm':
+       case 'n':
+       case 'o':
+       case 'p':
+       case 'q':
+       case 'r':
+       case 's':
+       case 't':
+       case 'u':
+       case 'v':
+       case 'w':
+       case 'x':
+       case 'y':
+       case 'z':
+       { return 1;};break;       
+   }
+   return 0;
+}
+
+
+void ZKNuetzlich::wandle(longlong zahl,int basis,&String_16 ziel)
+{
+   var longlong llNull = cast(longlong,0);
+   var int istNegativ = 0;
+   if( zahl < llNull) 
+   {
+      zahl = zahl * cast(longlong,-1);
+      istNegativ = 1;
+   }
+
+   if(basis > 36 ) 
+   {
+       ziel.append("BasisTooBig");
+       return ;
+   }
+  
+
+   if(  zahl < llNull)
+   {
+       ziel.append("tooBig");
+       return ;
+   }
+
+   var int z0 = cast(int,'0');
+   var int zA = cast(int,'A');
+
+   var char puffer[66];
+   var int stelle = 0;
+   if( (stelle == 0) && (zahl == llNull) )
+   {
+       puffer[0] = '0';
+       stelle++;
+   }
+   while( zahl > llNull )
+   {
+       var int ziffer = cast(int,(zahl % basis)); //Klammerung hier sehr wichtig !
+
+       if( ziffer < 10 )
+       {
+	   puffer[stelle] = cast(char,(ziffer+z0));
+       }
+       else
+       {
+	   puffer[stelle] = cast(char,((ziffer - 10)+zA)) ;
+       }
+       zahl = zahl / basis;
+       stelle++; 
+   }
+   //ziel.ensureCapacity(ziel.length() + stelle + 1); 
+   if( istNegativ )
+   {
+       ziel.append('-');
+   }
+   for(var int i=stelle - 1;  i >=0; i=i - 1)
+   {
+       ziel.append(puffer[i]);
+   }
+}
+
+
+void ZKNuetzlich::appendInAnfz(&String_16 zk,int x)
+{
+    zk.append('"');
+    zk.append(x);
+    zk.append('"');
+}
+
+
+
+
+
+void ZKNuetzlich::UnitTest(&int ergebnisUT)
+{
+ var PrintfClass pfc;
+ var String_16 s("123444443232222");
+ var longlong ergebnis;
+ ZKNuetzlich::strNachLonglong(s,ergebnis);
+
+ var longlong vergleich;
+ vergleich = cast(longlong,123444);
+ vergleich = vergleich * 1000000000;
+ vergleich = vergleich +  443232222; 
+
+ if(ergebnis != vergleich)
+ {
+    pfc.fstr("ZKNuetzlich::UnitTest() 1 failed").pr();
+    ergebnisUT =  -1;
+    return;
+ }
+ s.assign("1");
+ ZKNuetzlich::strNachLonglong(s,ergebnis);
+ vergleich = cast(longlong,1);
+ if(ergebnis != vergleich)
+ {
+    pfc.fstr("ZKNuetzlich::UnitTest() 2 failed").pr();
+    ergebnisUT = -1;
+    return;
+ }
+ s.assign("1000000000000");
+ ZKNuetzlich::strNachLonglong(s,ergebnis);
+ vergleich = cast(longlong,1000000000);
+ vergleich = vergleich * 1000;
+ if(ergebnis != vergleich)
+ {
+    pfc.fstr("ZKNuetzlich::UnitTest() 3 failed").pr();
+    ergebnisUT = -1;
+    return;
+ }
+ pfc.fstr("ZKNuetzlich::UnitTest erfolgreich").pr();
+ ergebnisUT = 1;
+}
+ 
+void ZKNuetzlich::strNachLonglong(&String_16 eingabe,&longlong ausgabe)
+{
+     ausgabe = cast(longlong,0);
+     var int egLm1 = eingabe.length() - 1;
+     for(var int i=0;i <= egLm1; i++)
+     {
+        var char zeichen = eingabe.getAt(i);
+        ausgabe = ausgabe + cast(int,zeichen) - cast(int,'0'); 
+        if( i < egLm1)
+        {
+           ausgabe = ausgabe * 10;
+        }
+     }
+}
+
+
+StringScanf::StringScanf(&String_16 str_i)
+{
+   str.assign(str_i);
+
+   lesePos = 0;
+}
+
+int StringScanf::scanInt(&int ret)
+{
+   var String_16 zStr;
+   while( (lesePos < str.length() ) && (zkn.istZiffer( str.getAt(lesePos) )==1) )
+   {
+      zStr.append( str.getAt(lesePos) );
+      lesePos++;
+   }
+   if(zStr.length() > 0) 
+   { 
+     ret = zStr.asNumber();
+     return 1;
+   }
+   return 0;
+}
+
+int StringScanf::scanString(&String_16 ret)
+{
+    
+   while( (lesePos < str.length() ) && (zkn.istLeerzeichen( str.getAt(lesePos) ) != 1) )
+   {
+      ret.append( str.getAt(lesePos) );
+      lesePos++;
+   }
+   if(ret.length() > 0) 
+   { 
+     return 1;
+   }
+   return 0;
+}
+
+void StringScanf::consume(char z)
+{
+   while( (lesePos < str.length() ) && ( str.getAt(lesePos)  == z) )
+   {
+      lesePos++;
+   }
+}
+
+void StringScanf::setString(&String_16 str_i)
+{
+    str.assign(str_i);
+    lesePos = 0;
+}
+
+void StringScanf::UnitTest()
+{
+    var PrintfClass pfc;
+    var String_16 strTest("2025-04-30 15:41:04.521 LIN Frame received: ID= 0x0022 00 00 00 00 00 00 00 00");
+    var StringScanf strScanf(strTest);
+
+    var int jahr;
+    if( (strScanf.scanInt(jahr) != 1) || (jahr != 2025)) { pfc.fstr("void StringScanf::UnitTest() Fehler 1").pr(); return ; }
+
+    strScanf.consume('-');
+    var int monat;
+    if( (strScanf.scanInt(monat) != 1) || (monat != 4)) { pfc.fstr("void StringScanf::UnitTest() Fehler 2").pr(); return; }
+
+    strScanf.consume('-');
+    var int tag;
+    if( (strScanf.scanInt(tag) != 1) || (tag != 30)) { pfc.fstr("void StringScanf::UnitTest() Fehler 3").pr(); return ; }
+
+    strScanf.consume(' ');
+
+    var int stunde;
+    if( (strScanf.scanInt(stunde) != 1) || (stunde != 15)) { pfc.fstr("void StringScanf::UnitTest() Fehler 4").pr(); return; }
+
+    strScanf.consume(':');
+
+    var int minute;
+    if( (strScanf.scanInt(minute) != 1) || (minute != 41)) { pfc.fstr("void StringScanf::UnitTest() Fehler 5").pr(); return ; }
+
+    strScanf.consume(':');
+
+    var int sekunde;
+    if( (strScanf.scanInt(sekunde) != 1) || (sekunde != 4)) { pfc.fstr("void StringScanf::UnitTest() Fehler 6").pr(); return ; }
+
+    strScanf.consume('.');
+    var int milliSekunde;
+    if( (strScanf.scanInt(milliSekunde) != 1) || (milliSekunde != 521)) { pfc.fstr("void StringScanf::UnitTest() Fehler 7").pr(); return ; }
+
+    strScanf.consume(' ');
+
+    //LIN Frame received: ID= 0x0022 00 00 00 00 00 00 00 00");
+    var String_16 linOrCan;
+    if( (strScanf.scanString(linOrCan) != 1) || (linOrCan.equals("LIN") != 1)) { pfc.fstr("void StringScanf::UnitTest() Fehler 8").pr(); return ; }
+
+    strScanf.consume(' ');
+
+    var String_16 frameStr;
+    if( (strScanf.scanString(frameStr) != 1) || (frameStr.equals("Frame") != 1)) { pfc.fstr("void StringScanf::UnitTest() Fehler 9").pr(); return ; }
+
+    strScanf.consume(' ');
+
+    var String_16 receivedStr;
+    if( (strScanf.scanString(receivedStr) != 1) || (receivedStr.equals("received:") != 1)) { pfc.fstr("void StringScanf::UnitTest() Fehler 10").pr(); return ; }
+
+    strScanf.consume(' ');
+
+    var String_16 idEquals;
+    if( (strScanf.scanString(idEquals) != 1) || (idEquals.equals("ID=") != 1)) { pfc.fstr("void StringScanf::UnitTest() Fehler 11").pr(); return ; }
+
+    strScanf.consume(' ');
+
+    var String_16 frameID;
+    if( (strScanf.scanString(frameID) != 1) || (frameID.equals("0x0022") != 1)) { pfc.fstr("void StringScanf::UnitTest() Fehler 12").pr(); return ; }
+
+    for(var int i=0; i < 8; i++)
+    {
+       strScanf.consume(' ');
+       var String_16 octet;
+       if( (strScanf.scanString(octet) != 1) || (octet.equals("00") != 1)) { pfc.fstr("void StringScanf::UnitTest() Fehler 13").pr(); return ; }
+
+    }
+
+    var longlong milliSeconds;
+    var int frameID2;
+    var int canOrLIN2;
+    var char framePayload[8];
+    framePayload[0] = '\n';//falsch initialisieren
+    if( strScanf.parseASCIIFrame(strTest,milliSeconds,frameID2,canOrLIN2,framePayload) != 1) { pfc.fstr("void StringScanf::UnitTest() Fehler 14").pr(); return ; }
+    pfc.fstr("timestamp:$ frameID:$").sa(milliSeconds).sa(frameID2).pr();
+}
+
+
+int StringScanf::parseASCIIFrame(&String_16 str_i, &longlong zeitstempel, &int frameID,&int canOrLIN, &char frame[])
+{
+    
+    //Beispiel: "2025-04-30 15:41:04.521 LIN Frame received: ID= 0x0022 00 00 00 00 00 00 00 00"
+    this.setString(str_i);
+
+    var int jahr;
+    if( this.scanInt(jahr) != 1 ) {   return -1; }
+
+    this.consume('-');
+    var int monat;
+    if( this.scanInt(monat) != 1 ) {   return -1; }
+
+    this.consume('-');
+    var int tag;
+    if( this.scanInt(tag) != 1 ) {   return -1; }
+
+    this.consume(' ');
+
+    var int stunde;
+    if( this.scanInt(stunde) != 1 ) {  return -1; }
+
+    this.consume(':');
+
+    var int minute;
+    if( this.scanInt(minute) != 1 ) {   return -1; }
+
+    this.consume(':');
+
+    var int sekunde;
+    if( this.scanInt(sekunde) != 1 ) {   return -1; }
+
+    this.consume('.');
+    var int milliSekunden;
+    if( this.scanInt(milliSekunden) != 1 ) {   return -1; }
+
+    this.consume(' ');
+
+    var longlong seconds;
+    inline_cpp[[ 
+    
+       struct tm ts = {0};
+
+       ts.tm_year = jahr - 1900;
+       ts.tm_mon = monat;
+       ts.tm_mday = tag;
+       ts.tm_hour = stunde;
+       ts.tm_min = minute;
+       ts.tm_sec = sekunde;
+       //POSIX time_t seconds = timegm(&tm);
+       seconds = _mkgmtime64(&ts);
+    
+    ]]
+    zeitstempel = (seconds * 1000) + milliSekunden;
+
+
+    //LIN Frame received: ID= 0x0022 00 00 00 00 00 00 00 00");
+    var String_16 linOrCan;
+    if( this.scanString(linOrCan) != 1 ) {   return -1; }
+
+    this.consume(' ');
+
+    var String_16 frameStr;
+    if( this.scanString(frameStr) != 1) {  return -1; }
+
+    frameID = cast(int,frameStr.asNumberLL(16));
+
+    this.consume(' ');
+
+    var String_16 receivedStr;
+    if( this.scanString(receivedStr) != 1 ) {  return -1; }
+
+    this.consume(' ');
+
+    var String_16 idEquals;
+    if( this.scanString(idEquals) != 1) {  return -1; }
+
+    this.consume(' ');
+
+    var String_16 frameIDStr;
+    if( this.scanString(frameIDStr) != 1) { return -1; }
+
+    for(var int i=0; i < 8; i++)
+    {
+       this.consume(' ');
+       var String_16 octet;
+       if( this.scanString(octet) != 1) {  return -1; }
+       frame[i] = cast(char,octet.asNumberLL(16));
+    }
+    return 1;
+}
+
+
+

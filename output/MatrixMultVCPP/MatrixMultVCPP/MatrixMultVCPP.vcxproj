@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\..\..\tmp\Sappeur_4.12\cppMapping\main.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\..\tmp\Sappeur_4.12\cppMapping\mapping.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\..\tmp\Sappeur_4.12\cppMapping\stadafx.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\..\tmp\Sappeur_4.12\cppMapping\suchoi.cpp" />
+    <ClCompile Include="..\..\AppMain.cpp" />
+    <ClCompile Include="..\..\determineStackMemoryNeeds.cpp" />
+    <ClCompile Include="..\..\determStackMemory_AppMain.ai.cpp" />
+    <ClCompile Include="..\..\determStackMemory_Strings.ai.cpp" />
+    <ClCompile Include="..\..\determStackMemory_System.ai.cpp" />
+    <ClCompile Include="..\..\determStackMemory_ZKNuetzlich.ai.cpp" />
+    <ClCompile Include="..\..\placementNewClass_AlphabeticSorter.cpp" />
+    <ClCompile Include="..\..\placementNewClass_AlphaEntry.cpp" />
+    <ClCompile Include="..\..\placementNewClass_Assigner_String_128.cpp" />
+    <ClCompile Include="..\..\placementNewClass_Assigner_String_16.cpp" />
+    <ClCompile Include="..\..\placementNewClass_Benutzer_Umschalter.cpp" />
+    <ClCompile Include="..\..\placementNewClass_CommandlineArgs.cpp" />
+    <ClCompile Include="..\..\placementNewClass_Compare_String_128.cpp" />
+    <ClCompile Include="..\..\placementNewClass_Compare_String_16.cpp" />
+    <ClCompile Include="..\..\placementNewClass_Hashable4.cpp" />
+    <ClCompile Include="..\..\placementNewClass_Hashtable4_Hashable4_KeyType4.cpp" />
+    <ClCompile Include="..\..\placementNewClass_Hash_String_128.cpp" />
+    <ClCompile Include="..\..\placementNewClass_Hash_String_16.cpp" />
+    <ClCompile Include="..\..\placementNewClass_HexPrinter.cpp" />
+    <ClCompile Include="..\..\placementNewClass_Input.cpp" />
+    <ClCompile Include="..\..\placementNewClass_KeyType4.cpp" />
+    <ClCompile Include="..\..\placementNewClass_Logfile.cpp" />
+    <ClCompile Include="..\..\placementNewClass_Main.cpp" />
+    <ClCompile Include="..\..\placementNewClass_Matrix.cpp" />
+    <ClCompile Include="..\..\placementNewClass_MTSuperClass.cpp" />
+    <ClCompile Include="..\..\placementNewClass_MultiThreadAdmin.cpp" />
+    <ClCompile Include="..\..\placementNewClass_Mutex.cpp" />
+    <ClCompile Include="..\..\placementNewClass_MutexInfo.cpp" />
+    <ClCompile Include="..\..\placementNewClass_NullPtrClassSappeurInternal.cpp" />
+    <ClCompile Include="..\..\placementNewClass_PrintfClass.cpp" />
+    <ClCompile Include="..\..\placementNewClass_Semaphore.cpp" />
+    <ClCompile Include="..\..\placementNewClass_SemaphoreInfo.cpp" />
+    <ClCompile Include="..\..\placementNewClass_SPRFile.cpp" />
+    <ClCompile Include="..\..\placementNewClass_StringScanf.cpp" />
+    <ClCompile Include="..\..\placementNewClass_String_128.cpp" />
+    <ClCompile Include="..\..\placementNewClass_String_16.cpp" />
+    <ClCompile Include="..\..\placementNewClass_SystemConstants.cpp" />
+    <ClCompile Include="..\..\placementNewClass_SystemControl.cpp" />
+    <ClCompile Include="..\..\placementNewClass_SystemTime.cpp" />
+    <ClCompile Include="..\..\placementNewClass_test556661.cpp" />
+    <ClCompile Include="..\..\placementNewClass_ThreadInfo.cpp" />
+    <ClCompile Include="..\..\placementNewClass_ThreadLocalStorage.cpp" />
+    <ClCompile Include="..\..\placementNewClass_ThreadLocalStorageEntry.cpp" />
+    <ClCompile Include="..\..\placementNewClass_ThreadLocalStorageList.cpp" />
+    <ClCompile Include="..\..\placementNewClass_Umgebung.cpp" />
+    <ClCompile Include="..\..\placementNewClass_ZKNuetzlich.cpp" />
+    <ClCompile Include="..\..\ProjektCPP.cpp" />
+    <ClCompile Include="..\..\Strings.cpp" />
+    <ClCompile Include="..\..\System.cpp" />
+    <ClCompile Include="..\..\ZKNuetzlich.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\ProjektIncludes.h" />
+    <ClInclude Include="..\..\header_AppMain.ai.h" />
+    <ClInclude Include="..\..\header_Strings.ai.h" />
+    <ClInclude Include="..\..\header_System.ai.h" />
+    <ClInclude Include="..\..\sizeofAlle.h" />
+    <ClInclude Include="..\..\sizeofDefine_AppMain.ai.h" />
+    <ClInclude Include="..\..\sizeofDefine_Strings.ai.h" />
+    <ClInclude Include="..\..\sizeofDefine_System.ai.h" />
+    <ClInclude Include="..\..\sizeofDefine_ZKNuetzlich.ai.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\AlphabeticSorter.ad" />
+    <None Include="..\..\..\AppMain.ad" />
+    <None Include="..\..\..\AppMain.ai" />
+    <None Include="..\..\..\String.ad.m4" />
+    <None Include="..\..\..\Strings.ai.m4" />
+    <None Include="..\..\..\System.ad" />
+    <None Include="..\..\..\System.ai" />
+    <None Include="..\..\..\ZKNuetzlich.ad" />
+    <None Include="..\..\..\ZKNuetzlich.ai" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{ff446c53-ccb9-4128-a26a-8a454f29469f}</ProjectGuid>
+    <RootNamespace>MatrixMultVCPP</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;WIN32;WINDOWS_SPR;%(PreprocessorDefinitions);SAPPEUR_PLAIN_EXE;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>c:\tmp\Sappeur_4.12\cppMapping;..\..;..\..\..</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;WIN32;WINDOWS_SPR;SAPPEUR_PLAIN_EXE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>c:\tmp\Sappeur_4.12\cppMapping;..\..\;..\..\..</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <EnableVectorLength>VectorLength256</EnableVectorLength>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

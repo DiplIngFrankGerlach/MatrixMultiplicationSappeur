@@ -1,0 +1,41 @@
+class ZKNuetzlich
+{
+methods:
+    int istLeerzeichen(char c);
+    int istZiffer(char z);
+
+    int istAlphabetisch(char z);
+
+    static void appendInAnfz(&String_16 zk,int x);
+
+    static void wandle(longlong zahl,int basis,&String_16 ziel);
+
+    static void UnitTest(&int ergebnis);
+
+    static void strNachLonglong(&String_16 eingabe,&longlong zeitstempel);
+};
+
+
+class StringScanf
+{
+    String_16 str;
+    int lesePos;
+
+    ZKNuetzlich zkn;
+    //var PrintfClass pfc;
+methods:
+    StringScanf(&String_16 str_i);
+
+    void setString(&String_16 str_i);
+
+    int scanInt(&int ret);
+
+    int scanString(&String_16 ret);
+
+    void consume(char z);
+
+    int parseASCIIFrame(&String_16 str_i, &longlong zeitstempel, &int frameID,&int canOrLIN, &char frame[]);
+
+    static void UnitTest();
+    
+};
