@@ -1,21 +1,27 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\cygwin64\\home\\bjafrge\\MatrixMult\\output\\MatrixMultVCPP\\",
+  "WorkspaceRootPath": "C:\\cygwin64\\home\\bjafrge\\MatrixMultiplicationSappeur\\output\\MatrixMultVCPP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FF446C53-CCB9-4128-A26A-8A454F29469F}|MatrixMultVCPP\\MatrixMultVCPP.vcxproj|C:\\cygwin64\\home\\bjafrge\\MatrixMult\\AppMain.ai||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{FF446C53-CCB9-4128-A26A-8A454F29469F}|MatrixMultVCPP\\MatrixMultVCPP.vcxproj|C:\\cygwin64\\home\\bjafrge\\MatrixMultiplicationSappeur\\AppMain.ai||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF446C53-CCB9-4128-A26A-8A454F29469F}|MatrixMultVCPP\\MatrixMultVCPP.vcxproj|C:\\cygwin64\\home\\bjafrge\\MatrixMult\\output\\ProjektCPP.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{FF446C53-CCB9-4128-A26A-8A454F29469F}|MatrixMultVCPP\\MatrixMultVCPP.vcxproj|C:\\cygwin64\\home\\bjafrge\\MatrixMultiplicationSappeur\\AppMain.ad||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF446C53-CCB9-4128-A26A-8A454F29469F}|MatrixMultVCPP\\MatrixMultVCPP.vcxproj|C:\\cygwin64\\home\\bjafrge\\MatrixMult\\output\\AppMain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\cygwin64\\home\\bjafrge\\MatrixMult\\AppMain.ai||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF446C53-CCB9-4128-A26A-8A454F29469F}|MatrixMultVCPP\\MatrixMultVCPP.vcxproj|C:\\cygwin64\\home\\bjafrge\\MatrixMult\\ProjektIncludes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\cygwin64\\home\\bjafrge\\MatrixMult\\ProjektIncludes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF446C53-CCB9-4128-A26A-8A454F29469F}|MatrixMultVCPP\\MatrixMultVCPP.vcxproj|C:\\cygwin64\\home\\bjafrge\\MatrixMult\\AppMain.ad||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\cygwin64\\home\\bjafrge\\MatrixMult\\output\\ProjektCPP.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\cygwin64\\home\\bjafrge\\MatrixMult\\output\\AppMain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\cygwin64\\home\\bjafrge\\MatrixMult\\AppMain.ad||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,70 +31,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProjektIncludes.h",
-              "DocumentMoniker": "C:\\cygwin64\\home\\bjafrge\\MatrixMult\\ProjektIncludes.h",
-              "RelativeDocumentMoniker": "..\\..\\ProjektIncludes.h",
-              "ToolTip": "C:\\cygwin64\\home\\bjafrge\\MatrixMult\\ProjektIncludes.h",
-              "RelativeToolTip": "..\\..\\ProjektIncludes.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-25T12:39:58.222Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProjektCPP.cpp",
-              "DocumentMoniker": "C:\\cygwin64\\home\\bjafrge\\MatrixMult\\output\\ProjektCPP.cpp",
-              "RelativeDocumentMoniker": "..\\ProjektCPP.cpp",
-              "ToolTip": "C:\\cygwin64\\home\\bjafrge\\MatrixMult\\output\\ProjektCPP.cpp",
-              "RelativeToolTip": "..\\ProjektCPP.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-25T12:36:46.165Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AppMain.cpp",
-              "DocumentMoniker": "C:\\cygwin64\\home\\bjafrge\\MatrixMult\\output\\AppMain.cpp",
-              "RelativeDocumentMoniker": "..\\AppMain.cpp",
-              "ToolTip": "C:\\cygwin64\\home\\bjafrge\\MatrixMult\\output\\AppMain.cpp",
-              "RelativeToolTip": "..\\AppMain.cpp",
-              "ViewState": "AgIAACoAAAAAAAAAAAAIwDsAAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-25T09:58:26.957Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "AppMain.ad",
-              "DocumentMoniker": "C:\\cygwin64\\home\\bjafrge\\MatrixMult\\AppMain.ad",
+              "DocumentMoniker": "C:\\cygwin64\\home\\bjafrge\\MatrixMultiplicationSappeur\\AppMain.ad",
               "RelativeDocumentMoniker": "..\\..\\AppMain.ad",
-              "ToolTip": "C:\\cygwin64\\home\\bjafrge\\MatrixMult\\AppMain.ad",
+              "ToolTip": "C:\\cygwin64\\home\\bjafrge\\MatrixMultiplicationSappeur\\AppMain.ad",
               "RelativeToolTip": "..\\..\\AppMain.ad",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-06-25T08:17:03.787Z"
+              "WhenOpened": "2025-06-26T07:39:45.676Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "AppMain.ai",
-              "DocumentMoniker": "C:\\cygwin64\\home\\bjafrge\\MatrixMult\\AppMain.ai",
+              "DocumentMoniker": "C:\\cygwin64\\home\\bjafrge\\MatrixMultiplicationSappeur\\AppMain.ai",
               "RelativeDocumentMoniker": "..\\..\\AppMain.ai",
-              "ToolTip": "C:\\cygwin64\\home\\bjafrge\\MatrixMult\\AppMain.ai",
+              "ToolTip": "C:\\cygwin64\\home\\bjafrge\\MatrixMultiplicationSappeur\\AppMain.ai",
               "RelativeToolTip": "..\\..\\AppMain.ai",
-              "ViewState": "AgIAACIAAAAAAAAAAAAAAEMAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAAAG8AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-06-25T08:12:56.183Z",
+              "WhenOpened": "2025-06-26T07:32:17.397Z",
               "EditorCaption": ""
             },
             {
@@ -98,6 +66,67 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProjektIncludes.h",
+              "DocumentMoniker": "C:\\cygwin64\\home\\bjafrge\\MatrixMult\\ProjektIncludes.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\MatrixMult\\ProjektIncludes.h",
+              "ToolTip": "C:\\cygwin64\\home\\bjafrge\\MatrixMult\\ProjektIncludes.h",
+              "RelativeToolTip": "..\\..\\..\\MatrixMult\\ProjektIncludes.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-25T12:39:58.222Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProjektCPP.cpp",
+              "DocumentMoniker": "C:\\cygwin64\\home\\bjafrge\\MatrixMult\\output\\ProjektCPP.cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\MatrixMult\\output\\ProjektCPP.cpp",
+              "ToolTip": "C:\\cygwin64\\home\\bjafrge\\MatrixMult\\output\\ProjektCPP.cpp",
+              "RelativeToolTip": "..\\..\\..\\MatrixMult\\output\\ProjektCPP.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-25T12:36:46.165Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppMain.cpp",
+              "DocumentMoniker": "C:\\cygwin64\\home\\bjafrge\\MatrixMult\\output\\AppMain.cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\MatrixMult\\output\\AppMain.cpp",
+              "ToolTip": "C:\\cygwin64\\home\\bjafrge\\MatrixMult\\output\\AppMain.cpp",
+              "RelativeToolTip": "..\\..\\..\\MatrixMult\\output\\AppMain.cpp",
+              "ViewState": "AgIAACoAAAAAAAAAAAAIwDsAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-25T09:58:26.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppMain.ad",
+              "DocumentMoniker": "C:\\cygwin64\\home\\bjafrge\\MatrixMult\\AppMain.ad",
+              "RelativeDocumentMoniker": "..\\..\\..\\MatrixMult\\AppMain.ad",
+              "ToolTip": "C:\\cygwin64\\home\\bjafrge\\MatrixMult\\AppMain.ad",
+              "RelativeToolTip": "..\\..\\..\\MatrixMult\\AppMain.ad",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-25T08:17:03.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppMain.ai",
+              "DocumentMoniker": "C:\\cygwin64\\home\\bjafrge\\MatrixMult\\AppMain.ai",
+              "RelativeDocumentMoniker": "..\\..\\..\\MatrixMult\\AppMain.ai",
+              "ToolTip": "C:\\cygwin64\\home\\bjafrge\\MatrixMult\\AppMain.ai",
+              "RelativeToolTip": "..\\..\\..\\MatrixMult\\AppMain.ai",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAAEMAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-25T08:12:56.183Z",
+              "EditorCaption": ""
             }
           ]
         }

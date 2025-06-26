@@ -71,6 +71,67 @@ void Matrix::multipliziere(&Matrix b,&Matrix ergebnis)
    }
 }
 
+void Matrix::multipliziereOriginal(&Matrix b,&Matrix ergebnis)
+{
+   var int N = zeilen;
+   for(var int z=0; z < N; z++)
+   {
+       var int zs = (z*spalten);
+       for(var int s=0; s < N; s++)
+       {
+           var float summe = 0;
+
+           for(var int i=0; i < N; i++)
+           {
+               summe = summe + (this.gebe(z,i) * b.gebe(i,s));               
+           }           
+           ergebnis.setze(z,s,summe);
+       }
+   }
+}
+
+void Matrix::testLauf()
+{
+   var PrintfClass pfc;
+
+   var int N = 101;
+   var Matrix a(N,N,1);
+   var Matrix b(N,N,0);
+   var Matrix ergebnisSSE(N,N,1);
+   var Matrix ergebnis(N,N,1);
+
+   for(var int z=0; z < N; z++)
+   {
+       for(var int s=0; s < N; s++)
+       {
+          a.setze(z,s,1.0f + s + z);
+          b.setze(z,s,1.0f + s + z);
+       }
+   }
+
+   a.multipliziere(b,ergebnisSSE);
+
+   a.multipliziereOriginal(b, ergebnis);
+
+   //Pruefung, ob wirklich identisch
+   var float maxDifferenz = 0.0f;
+   for(var int z=0; z < N; z++)
+   {
+       for(var int s=0; s < N; s++)
+       {
+           var float currentDiff = ergebnisSSE.gebe(z,s) - ergebnis.gebe(z,s);
+           if(currentDiff < 0.0f){currentDiff = currentDiff * -1.0f;}
+
+           if(currentDiff > maxDifferenz) { maxDifferenz = currentDiff; }
+       }
+   }
+   pfc.fstr("maximale Differenz: $").sa(maxDifferenz).pr();
+
+   pfc.fstr(" ergebnis[33][33]:$").sa(ergebnis.gebe(33,33)).pr();
+   pfc.fstr(" ergebnis[34][34]:$").sa(ergebnis.gebe(34,34)).pr();
+
+}
+
 
  
 
@@ -86,6 +147,10 @@ int Main::main()
       cla.getArgument(1,N);
    }
    else { pfc.fstr("Benutzung: MatrixMult <GROESSE_MATRIX>").pr(); return -1; }
+
+   Matrix::testLauf();
+
+   return -1;
 
 
 
@@ -104,19 +169,7 @@ int Main::main()
    }
 
    a.multipliziere(b,ergebnis);
-   /*
-   for(var int z=0; z < N; z++)
-   {
-       for(var int s=0; s < N; s++)
-       {
-           var float summe = 0;
-           for(var int i=0; i < N; i++)
-           {
-               summe = summe + (a.gebe(z,i) * b.gebe(i,s));
-           } 
-           ergebnis.setze(z,s,summe);
-       }
-   }*/
+   
 
    pfc.fstr("$").sa(ergebnis.gebe(100,100)).pr();
 

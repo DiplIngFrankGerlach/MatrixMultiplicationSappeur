@@ -17,6 +17,10 @@ methods:
      void setze(int zeile, int spalte, float wert);
 
      void multipliziere(&Matrix b,&Matrix ergebnis);
+
+     void multipliziereOriginal(&Matrix b,&Matrix ergebnis);
+
+     static void testLauf();
 };
 
 
