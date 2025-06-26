@@ -52,18 +52,12 @@ void Matrix::multipliziere(&Matrix b,&Matrix ergebnis)
            var float summe = 0;
 
            var int sz = (s*zeilen);
-           /*
-           for(var int i=0; i < N; i++)
-           {
-               //summe = summe + (a.gebe(z,i) * b.gebe(i,s));
-               summe = summe + (feld[zs + i] * feld[sz + i]);
-               
-           }*/
-           
-           inline_cpp[[                   
+                      
+           inline_cpp[[   
+                  //Multiply+sum a.row[i] and b.column[i]        
                   summe = simd_dot_product(&(feld._theObject->_array[zs]),
-                                               &(b.feld._theObject->_array[sz]), 
-                                               N);
+                                           &(b.feld._theObject->_array[sz]), 
+                                           N);
            ]]
            
            ergebnis.setze(z,s,summe);
@@ -148,9 +142,8 @@ int Main::main()
    }
    else { pfc.fstr("Benutzung: MatrixMult <GROESSE_MATRIX>").pr(); return -1; }
 
-   Matrix::testLauf();
-
-   return -1;
+   //Matrix::testLauf();
+   //return -1;
 
 
 
@@ -163,15 +156,24 @@ int Main::main()
    {
        for(var int s=0; s < N; s++)
        {
-          a.setze(z,s,1.0f);
+          a.setze(z,s,1.0f + s + z);
           b.setze(z,s,1.0f);
        }
    }
 
    a.multipliziere(b,ergebnis);
+
+   for(var int z=0; z < N; z++)
+   {
+       for(var int s=0; s < N; s++)
+       {
+          pfc.fstr("$ ").sa(ergebnis.gebe(z,s),10,5).prNoLF();
+       }
+       pfc.fstr("").pr();
+    }
    
 
-   pfc.fstr("$").sa(ergebnis.gebe(100,100)).pr();
+   //pfc.fstr("$").sa(ergebnis.gebe(100,100)).pr();
 
 
    return 1;
