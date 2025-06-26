@@ -3,7 +3,7 @@
 This project demonstrates Matrix Mulitplication in Sappeur and
 also using the SSE SIMD instructions.
 
-Using handcoded SSE SIMD instructions speed up runtime massively.
+Using handcoded SSE SIMD instructions speeds up runtime massively.
 
 https://en.wikipedia.org/wiki/Streaming_SIMD_Extensions
 
